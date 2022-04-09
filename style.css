@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+textarea{
+    resize: none;
+    width: 96%;
+    margin: 0;
+    padding: 1%;
+    border: 1px solid #8c8c8c;
+    border-radius: 3px;
+}
+.input-format{
+    text-align: center;
+    font-size: 18px;
+}
+.input-format label{
+    padding-right: 25px;
+}
+.text-format form .text-input{
+    display: flex;
+    flex-direction: row;
+}
+.file-input{
+    display: none;
+}
+.field{
+    width: 50%;
+    margin: 10px;
+}
+.field p{
+    font-weight: 500;
+}
+.text-format input[type="submit"] {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 1px solid;
+    background: black;
+    color: white;
+}
+.load{
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.del{
+    background-color: rgb(255 0 0 / 57%);
+    padding: 2px;
+    color: #520000;
+}
+.add{
+    background-color: rgb(0 128 0 / 59%);
+    padding: 2px;
+    color: #013601;
+}
+#output{
+    line-height: 35px;  
+}

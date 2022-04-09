@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diff Visuals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Diffing Algorithm</h1>
+        <section class="">
+            <div class="input-format">
+                <p>Select the input format you want</p>
+                <input type="radio" name="itype" value="text" checked id="txt" onchange="changeType('t')"> <label for="txt">Text</label> 
+                <input type="radio" name="itype" value="file" id="file" onchange="changeType('f')"> <label for="file">File</label>
+            </div>
+            <div class="text-format">
+                <form action="#" onsubmit="formSubmit(this);return false;">
+                    <div class="text-input">
+                        <div class="field">
+                            <p>Old Text</p>
+                            <textarea name="oldText" id="ot" cols="30" rows="10" placeholder="Enter old text here..."
+                            >The red brown fox jumped over the rolling log.</textarea>
+                        
+                        </div>
+                        <div class="field">
+                            <p>New Text</p>
+                            <textarea name="newText" id="nt" cols="30" rows="10" placeholder="Enter new text here..."
+                            >The brown spotted fox leaped over the rolling log.</textarea>
+                        </div>
+                    </div>
+                    <div class="file-input">
+                        <div class="field">
+                            <p>Old File</p>
+                            <input type="file" name="oldFile" id="oldFile" onchange="setData(0,this)" accept=".txt">
+                        </div>
+                        <div class="field">
+                            <p>New File</p>
+                            <input type="file" name="newFile" id="newFile" onchange="setData(1,this)" accept=".txt">
+                        </div>
+                    </div>
+                    <input type="submit" value="Submit">
+                    <!-- <button type="submit">Submit</button> -->
+                </form>
+            </div>
+        </section>
+        <section style="margin: 10px;">
+            <h3>Difference</h3>
+            <div>
+                <p id="output">
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="diff.js" type="text/javascript"></script>
+</html>

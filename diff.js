@@ -125,9 +125,6 @@ function formSubmit(form){
     oldText = oldText.replace(/\n/g,' <br> ');
     newText = newText.replace(/\n/g,' <br> ');
 
-    // replacing multiple spaces to single space.
-    oldText = oldText.replace(/\s+$/, '');
-    newText = newText.replace(/\s+$/, '');
 
     if(oldText == '' && newText == ''){
         // there is nothing to diff
@@ -154,6 +151,9 @@ function formSubmit(form){
     let newTextArray = newText.split(' ');
     oldTextArray.splice(0,0,"  ");
     newTextArray.splice(0,0,"  ");
+
+    // let oldTextArray = "  "+oldText;
+    // let newTextArray = "  "+newText;
 
     if(oldTextArray.length == 2 && newTextArray.length == 2){
         console.log("Checking by chars : ",oldTextArray[0],newTextArray[0]);
